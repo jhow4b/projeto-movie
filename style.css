@@ -121,14 +121,144 @@ body {
     color: white;
     font-size: 20px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .container {
     background-color: #151515;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     color: white;
 }
 
 .content-container {
     margin-left: 50px;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0px;
+    cursor: default;
+}
+
+.featured-button {
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    font-weight: 900;
+}
+
+.featured-button:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-img {
+    transform: scale(1.2);
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.movie-list-item:hover .movie-list-desc,
+.movie-list-item:hover .movie-title,
+.movie-list-item:hover .movie-button {
+    opacity: 100%;
+}
+
+.movie-img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+}
+
+
+.movie-title {
+    background-color: #333;
+    padding: 5px 10px;
+    position: absolute;
+    font-size: 30px;
+    border-radius: 5px;
+    top: 5%;
+    left: 1%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.movie-list-desc {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.movie-button {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 1%;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.arrow:hover {
+    color: white;
+    opacity: 1;
 }
